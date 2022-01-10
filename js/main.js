@@ -45,13 +45,34 @@ reply.addEventListener("click", function () {
     sendbutton.innerText = "Tweet!";
 
 
-    sendbutton.addEventListener("click", function () {
+     sendbutton.addEventListener("click", function () {
 
-        repcount++;
-        repbox.innerHTML = repcount;
-        newbox.style.display = "none";
-        reply.disabled = false;
+        if (username.value != "" && userInput.value != "") {
+
+            repcount++;
+            repbox.innerHTML = repcount;
+            newbox.style.display = "none";
+            reply.disabled = false;
+
+
+        }
+
+
     });
+     retweet.addEventListener("click", function () {
+
+        newbox.innerHTML = "";
+        reply.disabled = false;
+
+    });
+     like.addEventListener("click", function () {
+
+        newbox.innerHTML = "";
+        reply.disabled = false;
+
+    });
+
+
 
 
 });
@@ -65,7 +86,7 @@ retweet.addEventListener("click", function () {
         retcount++;
         retbox.innerHTML = retcount;
         retweet.className = "col-2 btn btn-secondary";
- 
+
 
     } else {
 
@@ -87,7 +108,7 @@ like.addEventListener("click", function () {
         likecount++;
         likebox.innerHTML = likecount;
         like.className = "col-2 btn btn-secondary";
- 
+
 
     } else {
 
